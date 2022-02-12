@@ -3,4 +3,12 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="genre1">Action</string>
+    <string name="genre1">Comedy</string>
+    <string name="genre1">Drama</string>
+    <string name="genre1">Horror</string>
+    <string name="genre1">Mystery</string>
+    <string name="genre1">Thriller</string>
+
+
 </resources>
