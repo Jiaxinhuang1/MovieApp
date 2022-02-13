@@ -4,6 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.2546875" />
+        <entry key="app/src/main/res/layout/activity_grid_list.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2015625" />
+        <entry key="app/src/main/res/layout/activity_vertical_list.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/grid_list_item.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/vertical_list_item.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.18229166666666666" />
       </map>
     </option>
   </component>

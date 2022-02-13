@@ -1,14 +1,13 @@
 <resources>
     <string name="app_name">MovieApp</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">Watchlist</string>
     <string name="genre1">Action</string>
-    <string name="genre1">Comedy</string>
-    <string name="genre1">Drama</string>
-    <string name="genre1">Horror</string>
-    <string name="genre1">Mystery</string>
-    <string name="genre1">Thriller</string>
+    <string name="genre2">Comedy</string>
+    <string name="genre3">Drama</string>
+    <string name="genre4">Horror</string>
+    <string name="genre5">Mystery</string>
+    <string name="genre6">Thriller</string>
 
 
 </resources>
