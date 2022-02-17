@@ -16,10 +16,10 @@ import com.example.movieapp.data.DataSource
 class GenreAdapter(
     private val context: Context?,
     private val layout: Int
-): RecyclerView.Adapter<GenreAdapter.DogCardViewHolder>() {
+): RecyclerView.Adapter<GenreAdapter.GenreCardViewHolder>() {
 
     //Initialize the data using the List found in data/DataSource
-    val movies = DataSource.movies
+    val movieList = DataSource.movies
 
     /**
      * Initialize view elements
@@ -44,30 +44,30 @@ class GenreAdapter(
         //  the vertical/horizontal list item should be used.
         val adaptorLayout = when (layout) {
             Layout.GRID -> LayoutInflater.from(parent.context).inflate(R.layout.grid_list_item,parent,false)
-            else -> LayoutInflater.from(parent.context).inflate(R.layout.vertical_horizontal_list_item,parent,false)
+            else -> LayoutInflater.from(parent.context).inflate(R.layout.vertical_list_item,parent,false)
         }
 
         //Null should not be passed into the view holder. This should be updated to reflect
         //the inflated layout.
-        return DogCardViewHolder(adaptorLayout)
+        return GenreCardViewHolder(adaptorLayout)
     }
 
     override fun getItemCount(): Int {
-        return dogList.size
+        return movieList.size
     }//return the size of the data set instead of 0
 
 
-    override fun onBindViewHolder(holder: DogCardViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: GenreCardViewHolder, position: Int) {
         // Get the data at the current position
         // Set the image resource for the current dog
         // Set the text for the current dog's name
         // Set the text for the current dog's age
         val resources = context?.resources
-        val dogData = dogList[position]
-        holder.dogImageView?.setImageResource(dogData.imageResourceId)
-        holder.dogNameText?.text = dogData.name
-        holder.dogAgeText?.text = resources?.getString(R.string.dog_age, dogData.age)
-        holder.dogHobbyText?.text = resources?.getString(R.string.dog_hobbies, dogData.hobbies)
+        val movieData = movieList[position]
+        holder.genreImageView?.setImageResource(movieData.imageResourceId)
+        holder.genreNameText?.text = movieData.name
+        //holder.dogAgeText?.text = resources?.getString(R.string.dog_age, dogData.age)
+        //holder.dogHobbyText?.text = resources?.getString(R.string.dog_hobbies, dogData.hobbies)
 
         // Set the text for the current dog's hobbies by passing the hobbies to the
         //  R.string.dog_hobbies string constant.

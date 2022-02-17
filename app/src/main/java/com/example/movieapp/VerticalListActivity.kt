@@ -15,11 +15,17 @@
 */
 package com.example.movieapp
 
+import GenreAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.dogglers.adapter.DogCardAdapter
-import com.example.dogglers.const.Layout
-import com.example.dogglers.databinding.ActivityVerticalListBinding
+import com.example.movieapp.const.Layout
+//import com.example
+//import com.example.movieapp.databinding.ActivityVerticalListBinding
+
+//import.com.example.MovieApp.adapter.GenreAdapter
+//import com.example.dogglers.const.Layout
+//import com.example.dogglers.databinding.ActivityVerticalListBinding
+import com.example.movieapp.databinding.ActivityVerticalListBinding
 
 class VerticalListActivity : AppCompatActivity() {
 
@@ -30,7 +36,7 @@ class VerticalListActivity : AppCompatActivity() {
         binding = ActivityVerticalListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.verticalRecyclerView.adapter = DogCardAdapter(
+        binding.verticalRecyclerView.adapter = GenreAdapter(
             applicationContext,
             Layout.VERTICAL
         )

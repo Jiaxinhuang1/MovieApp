@@ -36,8 +36,8 @@ object DataSource {
         Movie(
             R.drawable.dune,
             "Dune",
-            listOf(Genre()),
-            ""
+            listOf(Genre(R.drawable.drama,"Drama")),
+            listOf("Timothée Chalamet. Rebecca Ferguson, Oscar Isaac")
         ),
     )
 }
