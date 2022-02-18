@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.2546875" />
+        <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/activity_grid_list.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.1709090909090909" />
         <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.2546875" />
-        <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/fragment_home.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/fragment_home.xml" value="0.268" />
+        <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/grid_list_item.xml" value="0.13768115942028986" />
+        <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/vertical_list_item.xml" value="0.1" />
+        <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2546875" />
       </map>
     </option>
   </component>
