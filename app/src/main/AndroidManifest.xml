@@ -9,6 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieApp">
+        <activity android:name=".VerticalListActivity"
+            android:label="Action Genre"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".ComedyVerticalListActivity"
+            android:label="Comedy Genre"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".DramaVerticalListActivity"
+            android:label="Drama Genre"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".HorrorVerticalListActivity"
+            android:label="Horror Genre"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".MysteryVerticalListActivity"
+            android:label="Mystery Genre"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".ThrillerVerticalListActivity"
+            android:label="Thriller Genre"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"

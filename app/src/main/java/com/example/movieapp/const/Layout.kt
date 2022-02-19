@@ -22,5 +22,6 @@ package com.example.movieapp.const
  */
 object Layout {
     val VERTICAL = 1
-    val GRID = 2
+    val GRID = 1
+    val COMEDY = 1
 }

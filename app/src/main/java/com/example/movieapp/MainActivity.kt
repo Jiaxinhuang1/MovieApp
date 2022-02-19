@@ -2,6 +2,7 @@ package com.example.movieapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var listIntent: Intent
+    var GenreString = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,9 +36,47 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-    }
-    private fun launchGrid() {
-        listIntent = Intent(this, GenreGrid::class.java)
-        startActivity(listIntent)
+
+        val actionBtn = findViewById<ImageButton>(R.id.actionButton)
+        actionBtn.setOnClickListener{
+            GenreString = "ACTION"
+            val intent = Intent(this,VerticalListActivity::class.java)
+            startActivity(intent)
+        }
+
+        val comedyBtn = findViewById<ImageButton>(R.id.comedyButton)
+        comedyBtn.setOnClickListener{
+            GenreString = "COMEDY"
+            val intent = Intent(this,ComedyVerticalListActivity::class.java)
+            startActivity(intent)
+        }
+
+        val dramaBtn = findViewById<ImageButton>(R.id.dramaButton)
+        dramaBtn.setOnClickListener{
+            GenreString = "DRAMA"
+            val intent = Intent(this,DramaVerticalListActivity::class.java)
+            startActivity(intent)
+        }
+        val horrorBtn = findViewById<ImageButton>(R.id.horrorButton)
+        horrorBtn.setOnClickListener{
+            GenreString = "HORROR"
+            val intent = Intent(this,HorrorVerticalListActivity::class.java)
+            startActivity(intent)
+        }
+
+        val mysteryBtn = findViewById<ImageButton>(R.id.mysteryButton)
+        mysteryBtn.setOnClickListener{
+            GenreString = "MYSTERY"
+            val intent = Intent(this,MysteryVerticalListActivity::class.java)
+            startActivity(intent)
+        }
+
+        val thrillerBtn = findViewById<ImageButton>(R.id.thrillerButton)
+        thrillerBtn.setOnClickListener{
+            GenreString = "THRILLER"
+            val intent = Intent(this,ThrillerVerticalListActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

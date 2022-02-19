@@ -8,6 +8,7 @@
     <string name="horrorText">HORROR</string>
     <string name="mysteryText">MYSTERY</string>
     <string name="thrillerText">THRILLER</string>
+    <string name="movie_date">Date: %1$s</string>
 
 
 </resources>

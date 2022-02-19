@@ -14,10 +14,10 @@ import com.example.movieapp.data.DataSource
  * Adapter to inflate the appropriate list item layout and populate the view with information
  * from the appropriate data source
  */
-class GenreAdapter(
+class ComedyGenreAdapter(
     private val context: Context?,
     private val layout: Int,
-): RecyclerView.Adapter<GenreAdapter.MovieCardViewHolder>() {
+): RecyclerView.Adapter<ComedyGenreAdapter.MovieCardViewHolder>() {
 
     //Initialize the data using the List found in data/DataSource
     var main = MainActivity()
@@ -63,11 +63,11 @@ class GenreAdapter(
 //            return actionMovieList.size
 //        else
 //            return comedyMovieList.size
-        return actionMovieList.size
+        return comedyMovieList.size
     }//return the size of the data set instead of 0
 
 
-    override fun onBindViewHolder(holder: GenreAdapter.MovieCardViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ComedyGenreAdapter.MovieCardViewHolder, position: Int) {
         // Get the data at the current position
         // Set the image resource for the current dog
         // Set the text for the current dog's name
@@ -77,7 +77,7 @@ class GenreAdapter(
 //            "ACTION" -> actionMovieList[position]
 //            else -> comedyMovieList[position]
 //        }
-        val movieData = actionMovieList[position]
+        val movieData = comedyMovieList[position]
         holder.movieImageView?.setImageResource(movieData.imageResourceId)
         holder.movieNameText?.text = movieData.name
         holder.movieDateText?.text = resources?.getString(R.string.movie_date, movieData.date)

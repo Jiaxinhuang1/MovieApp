@@ -16,7 +16,6 @@
 package com.example.movieapp
 
 import ComedyGenreAdapter
-import GenreAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.movieapp.const.Layout
@@ -28,17 +27,16 @@ import com.example.movieapp.const.Layout
 //import com.example.dogglers.databinding.ActivityVerticalListBinding
 import com.example.movieapp.databinding.ActivityVerticalListBinding
 
-class VerticalListActivity : AppCompatActivity() {
+class ComedyVerticalListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityVerticalListBinding
-    //var mainAct = MainActivity()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityVerticalListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.verticalRecyclerView.adapter = GenreAdapter(
+        binding.verticalRecyclerView.adapter = ComedyGenreAdapter(
             applicationContext,
             Layout.VERTICAL
         )
