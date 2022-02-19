@@ -188,4 +188,30 @@ val ComedyMovieItems: List<MovieItem> = listOf(
             "November 2, 2017"
         )
     )
+    val MovieDetailsItem: List<MovieDetails> = listOf(
+        MovieDetails(
+            R.drawable.king_richard,
+            "King Richard",
+            "November 19, 2021",
+            "Action",
+            "Bob",
+            "He is a guy"
+        ),
+        MovieDetails(
+            R.drawable.king_richard,
+            "King Richard",
+            "November 19, 2021",
+            "Action",
+            "Bob",
+            "He is a guy"
+        ),
+        MovieDetails(
+            R.drawable.king_richard,
+            "King Richard",
+            "November 19, 2021",
+            "Action",
+            "Bob",
+            "He is a guy"
+        )
+    )
 }
