@@ -1,6 +1,5 @@
 package com.example.movieapp.model
 
-
 import androidx.annotation.DrawableRes
 
 data class MovieItem (
@@ -8,5 +7,3 @@ data class MovieItem (
         val name: String,
         val date: String,
 )
-
-
