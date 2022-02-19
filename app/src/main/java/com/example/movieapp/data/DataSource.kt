@@ -3,6 +3,7 @@ package com.example.movieapp.data
 import com.example.movieapp.R
 import com.example.movieapp.model.Genre
 import com.example.movieapp.model.Movie
+import com.example.movieapp.model.MovieDetails
 import com.example.movieapp.model.MovieItem
 
 

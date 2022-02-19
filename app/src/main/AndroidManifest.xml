@@ -27,6 +27,9 @@
         <activity android:name=".ThrillerVerticalListActivity"
             android:label="Thriller Genre"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".DetailsVerticalListActivity"
+            android:label="Movie Details"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"

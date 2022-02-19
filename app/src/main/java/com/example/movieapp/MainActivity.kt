@@ -2,6 +2,7 @@ package com.example.movieapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -75,6 +76,12 @@ class MainActivity : AppCompatActivity() {
         thrillerBtn.setOnClickListener{
             GenreString = "THRILLER"
             val intent = Intent(this,ThrillerVerticalListActivity::class.java)
+            startActivity(intent)
+        }
+
+        val detailsBtn = findViewById<Button>(R.id.details_btn)
+        detailsBtn.setOnClickListener{
+            val intent = Intent(this,DetailsVerticalListActivity::class.java)
             startActivity(intent)
         }
 

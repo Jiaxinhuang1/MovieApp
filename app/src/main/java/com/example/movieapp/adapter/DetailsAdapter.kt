@@ -14,14 +14,14 @@ import com.example.movieapp.data.DataSource
  * Adapter to inflate the appropriate list item layout and populate the view with information
  * from the appropriate data source
  */
-class HorrorGenreAdapter(
+class DetailsAdapter(
     private val context: Context?,
     private val layout: Int,
-): RecyclerView.Adapter<HorrorGenreAdapter.MovieCardViewHolder>() {
+): RecyclerView.Adapter<DetailsAdapter.DetailsCardViewHolder>() {
 
     //Initialize the data using the List found in data/DataSource
     var main = MainActivity()
-    val horrorMovieList = DataSource.HorrorMovieItems
+    val detailsList = DataSource.MovieDetailsItem
 
 
 
@@ -34,27 +34,30 @@ class HorrorGenreAdapter(
         //val genreNameText : TextView? = view?.findViewById(R.id.genre_name)
     //}
 
-    class MovieCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
+    class DetailsCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
         //Declare and initialize all of the list item UI components
         val movieImageView : ImageView? = view?.findViewById(R.id.movie_Image)
         val movieNameText : TextView? = view?.findViewById(R.id.movie_Name)
-        val movieDateText : TextView? = view?.findViewById(R.id.movie_date)
+        val movieDateText : TextView? = view?.findViewById(R.id.movie_Date)
+        val movieGenreText : TextView? = view?.findViewById(R.id.movie_Genre)
+        val movieCastText : TextView? = view?.findViewById(R.id.movie_date)
+        val movieSynopsisText : TextView? = view?.findViewById(R.id.movie_Synopsis)
         //val movieGenreText : TextView? = view?.findViewById(R.id.movie_genre)
         //val movieActorsText : TextView? = view?.findViewById(R.id.movie_actors)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieCardViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DetailsCardViewHolder {
         //Use a conditional to determine the layout type and set it accordingly.
         //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
         //  the vertical/horizontal list item should be used.
         val adaptorLayout = when (layout) {
-            Layout.VERTICAL -> LayoutInflater.from(parent.context).inflate(R.layout.movie_items,parent,false)
-            else -> LayoutInflater.from(parent.context).inflate(R.layout.movie_items,parent,false)
+            Layout.VERTICAL -> LayoutInflater.from(parent.context).inflate(R.layout.movie_details,parent,false)
+            else -> LayoutInflater.from(parent.context).inflate(R.layout.movie_details,parent,false)
         }
 
         //Null should not be passed into the view holder. This should be updated to reflect
         //the inflated layout.
-        return MovieCardViewHolder(adaptorLayout)
+        return DetailsCardViewHolder(adaptorLayout)
     }
 
     override fun getItemCount(): Int {
@@ -62,11 +65,11 @@ class HorrorGenreAdapter(
 //            return actionMovieList.size
 //        else
 //            return comedyMovieList.size
-        return horrorMovieList.size
+        return detailsList.size
     }//return the size of the data set instead of 0
 
 
-    override fun onBindViewHolder(holder: HorrorGenreAdapter.MovieCardViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DetailsAdapter.DetailsCardViewHolder, position: Int) {
         // Get the data at the current position
         // Set the image resource for the current dog
         // Set the text for the current dog's name
@@ -76,10 +79,14 @@ class HorrorGenreAdapter(
 //            "ACTION" -> actionMovieList[position]
 //            else -> comedyMovieList[position]
 //        }
-        val movieData = horrorMovieList[position]
+        val movieData = detailsList[position]
         holder.movieImageView?.setImageResource(movieData.imageResourceId)
         holder.movieNameText?.text = movieData.name
-        holder.movieDateText?.text = resources?.getString(R.string.movie_date, movieData.date)
+        holder.movieDateText?.text = resources?.getString(R.string.movie_Date, movieData.date)
+        holder.movieCastText?.text = resources?.getString(R.string.movie_Cast, movieData.cast)
+        holder.movieGenreText?.text = resources?.getString(R.string.movie_Genre, movieData.genre)
+        holder.movieSynopsisText?.text = resources?.getString(R.string.movie_Synopsis, movieData.synopsis)
+
         //holder.dogAgeText?.text = resources?.getString(R.string.dog_age, dogData.age)
         //holder.dogHobbyText?.text = resources?.getString(R.string.dog_hobbies, dogData.hobbies)
 

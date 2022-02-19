@@ -31,7 +31,7 @@
         // create image view of the character image
 
         <ImageView
-            android:id="@+id/movie_image"
+            android:id="@+id/movie_Image"
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
         //create a text view for character name
 
         <TextView
-            android:id="@+id/movie_name"
+            android:id="@+id/movie_Name"
             android:layout_width="215dp"
             android:layout_height="46dp"
             android:layout_marginStart="4dp"
@@ -50,11 +50,11 @@
             android:fontFamily="sans-serif-black"
             android:text="Movie Name"
             android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/movie_image"
+            app:layout_constraintStart_toEndOf="@+id/movie_Image"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/movie_cast"
+            android:id="@+id/movie_date"
             android:layout_width="218dp"
             android:layout_height="61dp"
             android:layout_marginStart="4dp"
@@ -62,8 +62,8 @@
             android:fontFamily="sans-serif-black"
             android:text="Movie Date"
             android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/movie_image"
-            app:layout_constraintTop_toBottomOf="@+id/movie_name" />
+            app:layout_constraintStart_toEndOf="@+id/movie_Image"
+            app:layout_constraintTop_toBottomOf="@+id/movie_Name" />
 
         <Button
             android:id="@+id/details_btn"
@@ -71,7 +71,7 @@
             android:layout_height="148dp"
             android:background="#00FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/movie_image"
+            app:layout_constraintStart_toStartOf="@+id/movie_Image"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck" />
 
