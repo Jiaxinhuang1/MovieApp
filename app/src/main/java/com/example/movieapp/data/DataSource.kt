@@ -5,6 +5,7 @@ import com.example.movieapp.model.Genre
 import com.example.movieapp.model.Movie
 import com.example.movieapp.model.MovieItem
 
+
 object DataSource {
     val genres: List<Genre> = listOf(
         Genre(

@@ -38,7 +38,7 @@ class DramaGenreAdapter(
         //Declare and initialize all of the list item UI components
         val movieImageView : ImageView? = view?.findViewById(R.id.movie_image)
         val movieNameText : TextView? = view?.findViewById(R.id.movie_name)
-        val movieDateText : TextView? = view?.findViewById(R.id.movie_date)
+        val movieDateText : TextView? = view?.findViewById(R.id.movie_cast)
         //val movieGenreText : TextView? = view?.findViewById(R.id.movie_genre)
         //val movieActorsText : TextView? = view?.findViewById(R.id.movie_actors)
     }
