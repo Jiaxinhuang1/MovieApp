@@ -35,8 +35,4 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-    private fun launchGrid() {
-        listIntent = Intent(this, GenreGrid::class.java)
-        startActivity(listIntent)
-    }
 }

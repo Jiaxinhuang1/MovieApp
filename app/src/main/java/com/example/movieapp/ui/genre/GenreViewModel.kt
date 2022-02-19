@@ -1,10 +1,10 @@
-package com.example.movieapp.ui.home
+package com.example.movieapp.ui.genre
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class GenreViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = ""
