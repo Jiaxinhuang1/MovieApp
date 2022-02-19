@@ -11,13 +11,18 @@
         <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/layout/vertical_list_item.xml" value="0.1" />
         <entry key="..\:/Users/jhuan/Downloads/AndroidStudioProjects/MovieApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2546875" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/ic_grid_layout.xml" value="0.2055" />
         <entry key="app/src/main/res/layout/activity_grid_list.xml" value="0.2328125" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.28894927536231885" />
         <entry key="app/src/main/res/layout/fragment_genre_list.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28894927536231885" />
         <entry key="app/src/main/res/layout/fragment_movie_details.xml" value="0.28894927536231885" />
         <entry key="app/src/main/res/layout/fragment_movie_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/fragment_watchlist.xml" value="0.2453125" />
+        <entry key="app/src/main/res/layout/ic_grid_layout.xml" value="0.2821557971014493" />
+        <entry key="app/src/main/res/layout/ic_linear_layout.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/item_view.xml" value="0.3067708333333333" />
+        <entry key="app/src/main/res/menu/layout_menu.xml" value="0.2453125" />
       </map>
     </option>
   </component>

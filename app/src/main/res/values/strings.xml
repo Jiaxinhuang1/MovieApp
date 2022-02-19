@@ -9,5 +9,7 @@
     <string name="mysteryText">MYSTERY</string>
     <string name="thrillerText">THRILLER</string>
 
+    <string name="action_switch_layout">Switch Layout</string>
+
 
 </resources>
