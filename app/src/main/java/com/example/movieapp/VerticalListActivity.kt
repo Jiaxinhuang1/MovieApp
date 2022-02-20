@@ -17,10 +17,8 @@ package com.example.movieapp
 
 import ComedyGenreAdapter
 import GenreAdapter
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import com.example.movieapp.const.Layout
 //import com.example
 //import com.example.movieapp.databinding.ActivityVerticalListBinding

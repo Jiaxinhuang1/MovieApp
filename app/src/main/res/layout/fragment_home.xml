@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0B0B"
+    android:background="#BFB3A1"
     tools:context=".ui.home.HomeFragment">
 
     <ImageButton
@@ -86,7 +86,6 @@
         android:layout_marginStart="30dp"
         android:text="@string/actionText"
         android:textAlignment="center"
-        android:textColor="#EDEDED"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +98,6 @@
         android:layout_marginEnd="30dp"
         android:text="@string/comedyText"
         android:textAlignment="center"
-        android:textColor="#EDEDED"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,7 +110,6 @@
         android:layout_marginStart="30dp"
         android:text="@string/dramaText"
         android:textAlignment="center"
-        android:textColor="#EDEDED"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +122,6 @@
         android:layout_marginEnd="30dp"
         android:text="@string/horrorText"
         android:textAlignment="center"
-        android:textColor="#EDEDED"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +134,6 @@
         android:layout_marginStart="30dp"
         android:text="@string/mysteryText"
         android:textAlignment="center"
-        android:textColor="#EDEDED"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -150,12 +145,10 @@
         android:layout_height="50dp"
         android:layout_marginEnd="30dp"
         android:text="@string/thrillerText"
-        android:textColor="#EDEDED"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/thrillerButton" />
-
     <TextView
         android:id="@+id/textHome"
         android:layout_width="wrap_content"
