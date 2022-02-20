@@ -1,3 +1,5 @@
+package com.example.movieapp.adapter
+
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -17,31 +19,39 @@ import com.example.movieapp.MainActivity
 import com.example.movieapp.R
 import com.example.movieapp.const.Layout
 import com.example.movieapp.data.DataSource
+import com.example.movieapp.model.Movie
+import com.example.movieapp.model.MovieItem
 
-/**
- * Adapter to inflate the appropriate list item layout and populate the view with information
- * from the appropriate data source
- */
-class DramaGenreAdapter(
+class WatchlistAdapter(
     private val context: Context?,
     private val layout: Int,
-): RecyclerView.Adapter<DramaGenreAdapter.MovieCardViewHolder>() {
+): RecyclerView.Adapter<WatchlistAdapter.MovieCardViewHolder>() {
 
     //Initialize the data using the List found in data/DataSource
     var main = MainActivity()
-    val dramaMovieList = DataSource.DramaMovieItems
+    val watchlist: MutableList<MovieItem> = mutableListOf()
+    init {
+        val movies = listOf(DataSource.ActionMovieItems, DataSource.ComedyMovieItems,
+                            DataSource.DramaMovieItems, DataSource.HorrorMovieItems,
+                            DataSource.MysteryMovieItems, DataSource.ThrillerMovieItems)
+
+        for (genre in movies) {
+            for (movie in genre) {
+                if (movie.inWatchlist)
+                    watchlist.add(movie)
+            }
+        }
+    }
+
     val SEARCH_PREFIX = "https://www.google.com/search?q="
-
-
-
 
     /**
      * Initialize view elements
      */
     //class GenreCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
-        //Declare and initialize all of the list item UI components
-        //val genreImageView : ImageView? = view?.findViewById(R.id.genre_image)
-        //val genreNameText : TextView? = view?.findViewById(R.id.genre_name)
+    //Declare and initialize all of the list item UI components
+    //val genreImageView : ImageView? = view?.findViewById(R.id.genre_image)
+    //val genreNameText : TextView? = view?.findViewById(R.id.genre_name)
     //}
 
     class MovieCardViewHolder(val view: View): RecyclerView.ViewHolder(view) {
@@ -53,6 +63,7 @@ class DramaGenreAdapter(
         //val movieActorsText : TextView? = view?.findViewById(R.id.movie_actors)
         val button = view.findViewById<Button>(R.id.button)
         val watchlistButton = view.findViewById<Button>(R.id.add_watchlist)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieCardViewHolder {
@@ -74,11 +85,11 @@ class DramaGenreAdapter(
 //            return actionMovieList.size
 //        else
 //            return comedyMovieList.size
-        return dramaMovieList.size
+        return watchlist.size
     }//return the size of the data set instead of 0
 
 
-    override fun onBindViewHolder(holder: DramaGenreAdapter.MovieCardViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: WatchlistAdapter.MovieCardViewHolder, position: Int) {
         // Get the data at the current position
         // Set the image resource for the current dog
         // Set the text for the current dog's name
@@ -88,7 +99,7 @@ class DramaGenreAdapter(
 //            "ACTION" -> actionMovieList[position]
 //            else -> comedyMovieList[position]
 //        }
-        val movieData = dramaMovieList[position]
+        val movieData = watchlist[position]
         holder.movieImageView?.setImageResource(movieData.imageResourceId)
         holder.movieNameText?.text = movieData.name
         holder.movieDateText?.text = resources?.getString(R.string.movie_date, movieData.date)
@@ -107,10 +118,10 @@ class DramaGenreAdapter(
             context.startActivity(intent)
         }
         holder.watchlistButton.setOnClickListener{
-            val toast = Toast.makeText(context, "${movieData.name} added to Watchlist", Toast.LENGTH_SHORT)
+            val toast = Toast.makeText(context, "${movieData.name} removed from Watchlist", Toast.LENGTH_SHORT)
             toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 0)
             toast.show()
-            movieData.inWatchlist = true
+            watchlist.remove(movieData)
         }
     }
     // Setup custom accessibility delegate to set the text read with
@@ -136,4 +147,3 @@ class DramaGenreAdapter(
         }
     }
 }
-

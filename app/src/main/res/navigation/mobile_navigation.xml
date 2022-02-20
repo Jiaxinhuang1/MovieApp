@@ -15,5 +15,5 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.example.movieapp.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/watchlist" />
 </navigation>

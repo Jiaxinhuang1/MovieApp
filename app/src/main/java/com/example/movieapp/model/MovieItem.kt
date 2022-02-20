@@ -6,4 +6,5 @@ data class MovieItem (
     @DrawableRes val imageResourceId: Int,
     val name: String,
     val date: String,
+    var inWatchlist: Boolean = false //default false
 )

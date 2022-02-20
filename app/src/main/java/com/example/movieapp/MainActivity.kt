@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,ThrillerVerticalListActivity::class.java)
             startActivity(intent)
         }
+
 //        val detailsBtn = findViewById<Button>(R.id.btn_details)
 //        detailsBtn.setOnClickListener{
 //            val intent = Intent(this,DetailsVerticalListActivity::class.java)
