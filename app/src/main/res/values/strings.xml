@@ -9,6 +9,10 @@
     <string name="mysteryText">MYSTERY</string>
     <string name="thrillerText">THRILLER</string>
     <string name="movie_date">Date: %1$s</string>
+    <string name="details_date">Date: %1$s</string>
+    <string name="details_synopsis">Synopsis: %1$s</string>
+    <string name="details_cast">Cast: %1$s</string>
+    <string name="details_genre">Genre: %1$s</string>
 
 
 </resources>

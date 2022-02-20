@@ -29,7 +29,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/genre_name"
+            android:id="@+id/details_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -39,10 +39,10 @@
             android:textAppearance="?attr/textAppearanceHeadline6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/genre_image" />
+            app:layout_constraintTop_toBottomOf="@+id/details_image" />
 
         <ImageView
-            android:id="@+id/genre_image"
+            android:id="@+id/details_image"
             android:layout_width="match_parent"
             android:layout_height="194dp"
             android:scaleType="centerCrop"

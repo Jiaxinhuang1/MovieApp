@@ -15,8 +15,7 @@
 */
 package com.example.movieapp
 
-import ComedyGenreAdapter
-import GenreAdapter
+import DetailsAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,7 +29,7 @@ import com.example.movieapp.const.Layout
 //import com.example.dogglers.databinding.ActivityVerticalListBinding
 import com.example.movieapp.databinding.ActivityVerticalListBinding
 
-class VerticalListActivity : AppCompatActivity() {
+class DetailsVerticalListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityVerticalListBinding
     //var mainAct = MainActivity()
@@ -40,7 +39,7 @@ class VerticalListActivity : AppCompatActivity() {
         binding = ActivityVerticalListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.verticalRecyclerView.adapter = GenreAdapter(
+        binding.verticalRecyclerView.adapter = DetailsAdapter(
             applicationContext,
             Layout.VERTICAL
         )
@@ -50,5 +49,6 @@ class VerticalListActivity : AppCompatActivity() {
 
         // Enable up button for backward navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
     }
 }
