@@ -111,6 +111,7 @@ class ComedyGenreAdapter(
             val toast = Toast.makeText(context, "${movieData.name} added to Watchlist", Toast.LENGTH_SHORT)
             toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 0)
             toast.show()
+            movieData.inWatchlist = true
         }
     }
     // Setup custom accessibility delegate to set the text read with
