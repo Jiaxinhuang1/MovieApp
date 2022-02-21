@@ -15,6 +15,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.MainActivity
 import com.example.movieapp.R
+import com.example.movieapp.WatchlistVerticalListActivity
 import com.example.movieapp.const.Layout
 import com.example.movieapp.data.DataSource
 
@@ -30,6 +31,7 @@ class MysteryGenreAdapter(
     //Initialize the data using the List found in data/DataSource
     var main = MainActivity()
     val mysteryMovieList = DataSource.MysteryMovieItems
+    val watchlistList = DataSource.WatchlistItem
     val SEARCH_PREFIX = "https://www.google.com/search?q="
 
 
@@ -109,6 +111,9 @@ class MysteryGenreAdapter(
             val toast = Toast.makeText(context, "${movieData.name} added to Watchlist", Toast.LENGTH_SHORT)
             toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 0)
             toast.show()
+            watchlistList.add(movieData)
+            val intent = Intent(context, WatchlistVerticalListActivity::class.java)
+            context.startActivity(intent)
         }
     }
     // Setup custom accessibility delegate to set the text read with

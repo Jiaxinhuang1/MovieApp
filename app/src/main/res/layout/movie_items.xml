@@ -72,7 +72,6 @@
             android:id="@+id/button"
             android:layout_width="110dp"
             android:layout_height="60dp"
-            android:layout_marginStart="4dp"
             android:text="Details"
             app:layout_constraintStart_toEndOf="@+id/movie_image"
             app:layout_constraintTop_toBottomOf="@+id/movie_date" />

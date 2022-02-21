@@ -15,6 +15,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.MainActivity
 import com.example.movieapp.R
+import com.example.movieapp.WatchlistVerticalListActivity
 import com.example.movieapp.const.Layout
 import com.example.movieapp.data.DataSource
 
@@ -54,6 +55,7 @@ class WatchlistAdapter(
         //val movieGenreText : TextView? = view?.findViewById(R.id.movie_genre)
         //val movieActorsText : TextView? = view?.findViewById(R.id.movie_actors)
         val button = view.findViewById<Button>(R.id.button)
+        val removeBtn = view.findViewById<Button>(R.id.remove_btn)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieCardViewHolder {
@@ -61,8 +63,8 @@ class WatchlistAdapter(
         //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
         //  the vertical/horizontal list item should be used.
         val adaptorLayout = when (layout) {
-            Layout.VERTICAL -> LayoutInflater.from(parent.context).inflate(R.layout.movie_items,parent,false)
-            else -> LayoutInflater.from(parent.context).inflate(R.layout.movie_items,parent,false)
+            Layout.VERTICAL -> LayoutInflater.from(parent.context).inflate(R.layout.watchlist_items,parent,false)
+            else -> LayoutInflater.from(parent.context).inflate(R.layout.watchlist_items,parent,false)
         }
 
         //Null should not be passed into the view holder. This should be updated to reflect
@@ -105,6 +107,14 @@ class WatchlistAdapter(
         holder.button.setOnClickListener {
             val queryUrl: Uri = Uri.parse("${SEARCH_PREFIX}${stringSearch}")
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
+            context.startActivity(intent)
+        }
+        holder.removeBtn.setOnClickListener{
+            val toast = Toast.makeText(context, "${movieData.name} removed from Watchlist", Toast.LENGTH_SHORT)
+            toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 0)
+            toast.show()
+            watchlist.remove(movieData)
+            val intent = Intent(context, WatchlistVerticalListActivity::class.java)
             context.startActivity(intent)
         }
     }

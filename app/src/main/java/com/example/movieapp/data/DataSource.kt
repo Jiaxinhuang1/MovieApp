@@ -56,7 +56,7 @@ object DataSource {
         MovieItem(
             R.drawable.no_time_to_die,
             "No Time to Die",
-            "October 6 2021"
+            "October 6, 2021"
         ) ,
         MovieItem(
             R.drawable.suicide_squad,
