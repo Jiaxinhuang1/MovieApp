@@ -27,8 +27,8 @@
         <activity android:name=".ThrillerVerticalListActivity"
             android:label="Thriller Genre"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".DetailsVerticalListActivity"
-            android:label="Movie Details"
+        <activity android:name=".WatchlistVerticalListActivity"
+            android:label="Watchlist"
             android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".MainActivity"

@@ -1,5 +1,6 @@
 package com.example.movieapp.data
 
+import androidx.lifecycle.MutableLiveData
 import com.example.movieapp.R
 import com.example.movieapp.model.*
 
@@ -193,6 +194,13 @@ object DataSource {
             "Action",
             "Bob",
             "He is a guy"
+        )
+    )
+    val WatchlistItem: MutableList<MovieItem> = mutableListOf(
+        MovieItem(
+            R.drawable.king_richard,
+            "King Richard",
+            "November 19, 2021"
         )
     )
 }

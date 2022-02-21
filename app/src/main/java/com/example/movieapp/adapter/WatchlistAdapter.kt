@@ -1,6 +1,5 @@
 import android.content.Context
 import android.content.Intent
-import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import android.os.Build
 import android.view.Gravity
@@ -16,27 +15,22 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.MainActivity
 import com.example.movieapp.R
-import com.example.movieapp.VerticalListActivity
-import com.example.movieapp.WatchlistVerticalListActivity
 import com.example.movieapp.const.Layout
 import com.example.movieapp.data.DataSource
-import com.example.movieapp.ui.dashboard.DashboardFragment
-import com.example.movieapp.ui.dashboard.DashboardViewModel
 
 
 /**
  * Adapter to inflate the appropriate list item layout and populate the view with information
  * from the appropriate data source
  */
-class GenreAdapter(
+class WatchlistAdapter(
     private val context: Context?,
     private val layout: Int,
-): RecyclerView.Adapter<GenreAdapter.MovieCardViewHolder>() {
+): RecyclerView.Adapter<WatchlistAdapter.MovieCardViewHolder>() {
 
     //Initialize the data using the List found in data/DataSource
     var main = MainActivity()
-    val actionMovieList = DataSource.ActionMovieItems
-    val watchlistList = DataSource.WatchlistItem
+    val watchlist = DataSource.WatchlistItem
     val SEARCH_PREFIX = "https://www.google.com/search?q="
 
 
@@ -60,7 +54,6 @@ class GenreAdapter(
         //val movieGenreText : TextView? = view?.findViewById(R.id.movie_genre)
         //val movieActorsText : TextView? = view?.findViewById(R.id.movie_actors)
         val button = view.findViewById<Button>(R.id.button)
-        val watchlistButton = view.findViewById<Button>(R.id.add_watchlist)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieCardViewHolder {
@@ -82,7 +75,7 @@ class GenreAdapter(
 //            return actionMovieList.size
 //        else
 //            return comedyMovieList.size
-        return actionMovieList.size
+        return watchlist.size
     }//return the size of the data set instead of 0
 
 
@@ -96,7 +89,7 @@ class GenreAdapter(
 //            "ACTION" -> actionMovieList[position]
 //            else -> comedyMovieList[position]
 //        }
-        val movieData = actionMovieList[position]
+        val movieData = watchlist[position]
         holder.movieImageView?.setImageResource(movieData.imageResourceId)
         holder.movieNameText?.text = movieData.name
         holder.movieDateText?.text = resources?.getString(R.string.movie_date, movieData.date)
@@ -114,15 +107,6 @@ class GenreAdapter(
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
             context.startActivity(intent)
         }
-        holder.watchlistButton.setOnClickListener{
-            val toast = Toast.makeText(context, "${movieData.name} added to Watchlist", Toast.LENGTH_SHORT)
-            toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 0)
-            toast.show()
-            watchlistList.add(movieData)
-            val intent = Intent(context, WatchlistVerticalListActivity::class.java)
-            context.startActivity(intent)
-        }
-
     }
     // Setup custom accessibility delegate to set the text read with
     // an accessibility service
