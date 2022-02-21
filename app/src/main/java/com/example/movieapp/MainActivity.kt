@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.movieapp.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -76,6 +77,11 @@ class MainActivity : AppCompatActivity() {
         thrillerBtn.setOnClickListener{
             GenreString = "THRILLER"
             val intent = Intent(this,ThrillerVerticalListActivity::class.java)
+            startActivity(intent)
+        }
+        val watchlistBtn = findViewById<Button>(R.id.watchlist_btn)
+        watchlistBtn.setOnClickListener{
+            val intent = Intent(this,WatchlistVerticalListActivity::class.java)
             startActivity(intent)
         }
 //        val detailsBtn = findViewById<Button>(R.id.btn_details)

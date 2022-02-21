@@ -7,6 +7,15 @@
     android:background="#0B0B0B"
     tools:context=".ui.home.HomeFragment">
 
+    <Button
+        android:id="@+id/watchlist_btn"
+        android:layout_width="392dp"
+        android:layout_height="64dp"
+        android:text="My Watchlist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageButton
         android:id="@+id/actionButton"
         android:layout_width="150dp"
